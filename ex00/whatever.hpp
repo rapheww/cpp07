@@ -6,7 +6,7 @@
 /*   By: rchaumei <rchaumei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/03 16:50:24 by rchaumei          #+#    #+#             */
-/*   Updated: 2026/06/03 16:56:20 by rchaumei         ###   ########.fr       */
+/*   Updated: 2026/06/03 17:09:50 by rchaumei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,8 @@
 #include <iostream>
 
 template <typename T>
-T swap(T a, T b){
-    T tmp;
-    
-    tmp = a;
+void swap(T &a, T &b){
+    T tmp = a;    
     a = b;
     b = tmp;
 }

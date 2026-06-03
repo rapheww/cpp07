@@ -3,10 +3,10 @@ NAME        = functions
 CXX         = c++   
 CXXFLAGS    = -Wall -Werror -Wextra -std=c++98 -MMD
 
-SRC         =	main.cpp 
+SRC         = main.cpp
 
 OBJ_DIR     = obj
-OBJ         = $(SRC:src/%.cpp=$(OBJ_DIR)/%.o)
+OBJ         = $(SRC:%.cpp=$(OBJ_DIR)/%.o)
 DEPS        = $(OBJ:.o=.d)
 
 all:    $(NAME)
@@ -15,7 +15,7 @@ $(NAME):    $(OBJ)
 	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 	@printf "\033[1;92m$(NAME) created\n\033[0;39m"
 
-$(OBJ_DIR)/%.o: src/%.cpp
+$(OBJ_DIR)/%.o: %.cpp
 	@mkdir -p $(dir $@)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
