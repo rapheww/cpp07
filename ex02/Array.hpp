@@ -6,7 +6,7 @@
 /*   By: rchaumei <rchaumei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 16:29:35 by rchaumei          #+#    #+#             */
-/*   Updated: 2026/06/05 17:48:05 by rchaumei         ###   ########.fr       */
+/*   Updated: 2026/06/10 18:19:42 by rchaumei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class Array{
         Array& operator=(const Array& source){
             if (this != &source){
                 delete[] _array;
+                _array = NULL;
                 _size = source._size;
                 if (_size > 0)
                     _array = new T[source._size];

@@ -6,7 +6,7 @@
 /*   By: rchaumei <rchaumei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 17:33:10 by rchaumei          #+#    #+#             */
-/*   Updated: 2026/06/05 17:45:07 by rchaumei         ###   ########.fr       */
+/*   Updated: 2026/06/10 18:19:09 by rchaumei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,13 @@ int main(){
         std::cout<<"Exception :"<<e.what()<<std::endl;
     }
     std::cout<<"size a : "<<a.size()<<std::endl;
+
+    std::cout<<"EMPTY\n";
+    Array<int> empty;
+    Array<int> x(10);
+
+    x = empty;
+
+    std::cout << x.size() << std::endl;
     return 0;
 }
